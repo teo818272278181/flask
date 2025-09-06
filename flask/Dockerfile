@@ -11,7 +11,7 @@ RUN apt-get update -qq \
       python3-dev \
       && apt-get clean \
       && rm -rf /var/lib/apt/lists/*
-
+RUN lscpu
 # Copy the current directory contents into the container at /app
 COPY . /app
 
